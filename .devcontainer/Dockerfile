@@ -9,17 +9,5 @@ RUN apt-get update && \
 # Set the working directory
 WORKDIR /workspace
 
-# Copy Maven configuration
-COPY pom.xml .
-
-# Download dependencies (for better Docker layer caching)
-RUN mvn dependency:resolve
-
-# Copy the source code
-COPY . .
-
 # Expose the port that Spring Boot will run on
 EXPOSE 8080
-
-# Default command to run when container starts
-CMD ["mvn", "spring-boot:run"]
