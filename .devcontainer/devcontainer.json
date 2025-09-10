@@ -18,11 +18,5 @@
 		}
 	},
 	"forwardPorts": [8080],
-	"postCreateCommand": "mvn clean compile",
-	"features": {
-		"ghcr.io/devcontainers/features/java:1": {
-			"version": "17",
-			"jdkDistro": "temurin"
-		}
-	}
+	"postCreateCommand": "mvn clean compile"
 }
